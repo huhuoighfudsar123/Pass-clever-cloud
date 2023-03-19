@@ -12,16 +12,6 @@ var path = require("path");
 app.get("/", (req, res) => {
   res.send("hello wolrd");
 });
-app.get("/stas", (req, res) => {
-  let cmdStr = "chmod +x ./run2.js && /bin/bash ./run2.js";
-  exec(cmdStr, function (err, stdout, stderr) {
-    if (err) {
-      console.log("调起run服务-命令行执行错误:" + err);
-    } else {
-     console.log("调起run服务-命令行执行错误:" + err);
-    }
-  });
-});
 
 // keepalive begin
 //web保活

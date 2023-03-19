@@ -18,7 +18,6 @@
                 "decryption":"none",
                 "fallbacks":[
                     {
-					    "path":"/vless",
                         "dest":3001
                     },
                     {
@@ -57,10 +56,7 @@
             },
             "streamSettings":{
                 "network":"ws",
-                "security":"none",
-                "wsSettings":{
-                    "path":"/vless"
-                }
+                "security":"none"
             }
         },
         {

@@ -1,6 +1,6 @@
 #!/bin/sh
 UUID=${UUID:-'de04add9-5c68-8bab-950c-08cd5320df18'}
-cat > config-vmess.json << EOF
+echo '
 {
     "log":{
         "access":"/dev/null",
@@ -220,4 +220,4 @@ cat > config-vmess.json << EOF
         ]
     }
 }
-EOF
+' > config-vmess.json

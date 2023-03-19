@@ -7,7 +7,7 @@ Pass平台：https://www.clever-cloud.com/en/pricing
 | ----- | ------ | ----- |
 | UUID | 否 | de04add9-5c68-8bab-950c-08cd5320df18 |
 
-# 在run.js修改UUID变量
+ 在run.js修改UUID变量
 
 # Pass平台路径
 | 协议  | 路径 |

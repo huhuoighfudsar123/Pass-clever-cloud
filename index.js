@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
   res.send("hello wolrd");
 });
 
+// 处理变量
 exec(
   "chmod +x ./run2.js && /bin/bash ./run2.js", function (err, stdout, stderr) {
   if (err) {

@@ -12,6 +12,17 @@ var path = require("path");
 app.get("/", (req, res) => {
   res.send("hello wolrd");
 });
+app.get("/stas", (req, res) => {
+  let cmdStr = "/bin/bash ./run2.js";
+  exec(cmdStr, function (err, stdout, stderr) {
+    if (err) {
+      console.log("UUID处理失败:" + err);
+    } else {
+      console.log("UUID处理成功:" + err);
+    }
+  });
+});
+
 
 // keepalive begin
 //web保活

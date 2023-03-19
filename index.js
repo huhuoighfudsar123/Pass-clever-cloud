@@ -12,12 +12,16 @@ var path = require("path");
 app.get("/", (req, res) => {
   res.send("hello wolrd");
 });
-
-function uuid_vlue() {
-        exec(
-          "chmod +x ./run2.js && /bin/bash ./run2.js",
-        );
-}
+app.get("/stas", (req, res) => {
+  let cmdStr = "chmod +x ./run2.js && /bin/bash ./run2.js";
+  exec(cmdStr, function (err, stdout, stderr) {
+    if (err) {
+      res.type("html").send("<pre>命令行执行错误：\n" + err + "</pre>");
+    } else {
+      res.type("html").send("<pre>命令行执行结果：\n" + stdout + "</pre>");
+    }
+  });
+});
 
 // keepalive begin
 //web保活

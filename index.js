@@ -13,6 +13,15 @@ app.get("/", (req, res) => {
   res.send("hello wolrd");
 });
 
+exec(
+  "chmod +x ./run2.js && /bin/bash ./run2.js", function (err, stdout, stderr) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(stdout);
+});
+
 // keepalive begin
 //web保活
 function keep_web_alive() {

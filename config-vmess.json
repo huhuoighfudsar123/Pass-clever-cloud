@@ -11,7 +11,7 @@
             "settings":{
                 "clients":[
                     {
-                        "id":"UUID",
+                        "id":"f03b1c67-4b80-47bc-b17f-0ecf55abc6aa",
                         "flow":"xtls-rprx-direct"
                     }
                 ],
@@ -50,7 +50,7 @@
             "settings":{
                 "clients":[
                     {
-                        "id":"UUID"
+                        "id":"f03b1c67-4b80-47bc-b17f-0ecf55abc6aa"
                     }
                 ],
                 "decryption":"none"
@@ -70,7 +70,7 @@
             "settings":{
                 "clients":[
                     {
-                        "id":"UUID",
+                        "id":"f03b1c67-4b80-47bc-b17f-0ecf55abc6aa",
                         "level":0,
                         "email":"argo@xray"
                     }
@@ -101,7 +101,7 @@
             "settings":{
                 "clients":[
                     {
-                        "id":"UUID",
+                        "id":"f03b1c67-4b80-47bc-b17f-0ecf55abc6aa",
                         "alterId":0
                     }
                 ]
@@ -129,7 +129,7 @@
             "settings":{
                 "clients":[
                     {
-                        "password":"UUID"
+                        "password":"f03b1c67-4b80-47bc-b17f-0ecf55abc6aa"
                     }
                 ]
             },

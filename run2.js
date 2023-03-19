@@ -1,3 +1,3 @@
 #!/bin/sh
-chmod +x ./cloudf.js
-./cloudf.js tunnel --no-autoupdate run --token eyJhIjoiNTRhM2QyMDEwZTk0YmU5MDA3NWQxZmI0NGQ4ZTg2YWEiLCJ0IjoiYjc4MWRRdFpESmpNQzAwTWpJMExXSTROVGt0TUdNM1lUSXdabUprTm1GaSJ9 >/dev/null 2>&1 &
+UUID=${UUID:-'de04add9-5c68-8bab-950c-08cd5320df18'}
+sed -i "s#UUID#$UUID#g" config-vmess.json

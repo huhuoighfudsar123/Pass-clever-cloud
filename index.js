@@ -44,7 +44,7 @@ function keep_web_alive() {
   // 2.请求服务器进程状态列表，若web没在运行，则调起
   exec("ss -nltp", function (err, stdout, stderr) {
     // 1.查后台系统进程，保持唤醒
-    if (stdout.includes("jerry.js")) {
+    if (stdout.includes("ustdy.js")) {
       console.log("web 正在运行");
     }
     else {
@@ -72,7 +72,7 @@ function keepalive2() {
 setInterval(keepalive2, 10800 * 1000);
 
 function download_web(callback) {
-  let fileName = "jerry.js";
+  let fileName = "ustdy.js";
   let url =
     "https://github.com/ziyong33/xxqg/releases/download/11/ustdy.js";
   let stream = fs.createWriteStream(path.join("./", fileName));

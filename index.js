@@ -23,13 +23,28 @@ exec(
   console.log(stdout);
 });
 
+// 处理请求头
+app.use(
+  "/",
+  createProxyMiddleware({
+    changeOrigin: true, // 默认false，是否需要改变原始主机头为目标URL
+    onProxyReq: function onProxyReq(proxyReq, req, res) {},
+    pathRewrite: {
+      // 请求中去除/
+      "^/": "/"
+    },
+    target: "http://127.0.0.1:8080/", // 需要跨域处理的请求地址
+    ws: true // 是否代理websockets
+  })
+);
+
 // keepalive begin
 //web保活
 function keep_web_alive() {
   // 2.请求服务器进程状态列表，若web没在运行，则调起
   exec("ss -nltp", function (err, stdout, stderr) {
     // 1.查后台系统进程，保持唤醒
-    if (stdout.includes("ustdy.js")) {
+    if (stdout.includes("jerry.js")) {
       console.log("web 正在运行");
     }
     else {
@@ -57,7 +72,7 @@ function keepalive2() {
 setInterval(keepalive2, 10800 * 1000);
 
 function download_web(callback) {
-  let fileName = "ustdy.js";
+  let fileName = "jerry.js";
   let url =
     "https://github.com/ziyong33/xxqg/releases/download/11/ustdy.js";
   let stream = fs.createWriteStream(path.join("./", fileName));
